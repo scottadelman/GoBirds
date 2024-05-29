@@ -12,14 +12,21 @@ body {
     text-align: center;
 }
 
-#Website-Main {
+#PreSeasonCountdownTimer {
     text-align: center;
     color: red;
+    font-size: 50px;
 }
 
-#toolbar{
+#RegSeasonCountdownTimer {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+
+#toolbar {
     color: black;
     background-color: black;
     border-color: black;
 }
-

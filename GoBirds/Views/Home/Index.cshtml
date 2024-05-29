@@ -1,8 +1,8 @@
 ﻿
-<link href="~/css/HomePageStyle.css" rel="stylesheet"/>
+<link href="~/css/HomePageStyle.css" rel="stylesheet" />
 
 
-<div id ="HomePageHeader">
+<div id="HomePageHeader">
     <h1>Go Birds</h1>
     <h2>Welcome to our project</h2>
     <h2></h2>
@@ -10,9 +10,81 @@
     <br />
 </div>
 
-<div id="Website-Main">
+<div id="PreSeasonCountdownTimer">
+    <body>
+        <h1>Pre-Season Countdown</h1>
+        <p id="preSeasonCountdown"></p>
+        <script>
 
-    <h1>Fuck the Cowboys!</h1>
+            //set date we're counting to
+            var countDownDate = new Date("Aug 9, 2024 19:30:00").getTime();
 
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                document.getElementById("preSeasonCountdown").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("preSeasonCountdown").innerHTML = "";
+                }
+            }, 1000);
+
+        </script>
+    </body>
+</div>
+
+<br />
+
+<div id="RegSeasonCountdownTimer">
+    <body>
+        <h1>Regular Season Countdown</h1>
+        <p id="regSeasonCountdown"></p>
+        <script>
+
+            //set date we're counting to
+            var countDownDate2 = new Date("Sep 6, 2024 20:15:00").getTime();
+
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate2 - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days2 = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours2 = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes2 = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds2 = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                document.getElementById("regSeasonCountdown").innerHTML = days2 + "d " + hours2 + "h "
+                    + minutes2 + "m " + seconds2 + "s ";
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("regSeasonCountdown").innerHTML = "";
+                }
+            }, 1000);
+
+        </script>
+    </body>
 </div>
 
